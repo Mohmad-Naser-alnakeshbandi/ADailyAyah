@@ -16,16 +16,11 @@ const GetRandomAyah = () => {
         const surahs = response.data;
         const randomSurahIndex = Math.floor(Math.random() * surahs.length);
         const randomSurah = surahs[randomSurahIndex];
-
-        console.log(randomSurah.name);
         setSurahName(randomSurah.name);
-
         const ayahResponse = await axios.get(randomSurah.link);
         const ayahs = ayahResponse.data.verses;
         const randomAyahIndex = Math.floor(Math.random() * ayahs.length);
         const randomAyah = ayahs[randomAyahIndex];
-
-        console.log(randomAyah.id);
         setAyahNumber(randomAyah.id);
         setAyah(randomAyah.text);
       } catch (error) {
