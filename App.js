@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Get_Ayah_request from './service/Get_Ayah_request';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Get_Ayah_request/>
       <StatusBar style="auto" />
     </View>
   );
